@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c0e0e">
+<meta name="color-scheme" content="dark">
+<title>Digital Documentation of Industrial Visit – Bursa Efek Indonesia</title>
+<meta name="description" content="Dokumentasi digital kunjungan industri ke Bursa Efek Indonesia: profil, kegiatan, materi, galeri, vlog, dan refleksi.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-container topbar">
+    <a class="brand" href="#home"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></span><span>Visit<span class="brand-accent">BEI</span></span></a>
+    <nav class="main-nav" id="menu" aria-label="Navigasi utama">
+      <a href="#home">Beranda</a><a href="#profil">Profil BEI</a><a href="#kegiatan">Kegiatan</a><a href="#materi">Materi</a><a href="#galeri">Galeri</a><a href="#vlog">Vlog</a><a href="#refleksi">Refleksi</a>
+    </nav>
+    <div class="top-actions">
+      <button class="search-button" id="openSearch" type="button" aria-label="Cari materi"><i data-i="search"></i><span>Cari materi</span><kbd>/</kbd></button>
+      <button class="square-button mobile-menu" id="burger" type="button" aria-label="Buka menu" aria-expanded="false"><i data-i="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="market-strip" aria-hidden="true">
+  <div class="site-container market-inner">
+    <span class="market-label"><i class="live"></i>Pasar ilustrasi</span>
+    <div class="market-quotes"><div class="track" id="track"></div></div>
+    <span class="market-status">Data acak, bukan data pasar</span>
+  </div>
+</div>
+
+<main class="site-container">
+<!-- BERANDA -->
+<section class="dashboard" id="home">
+  <p class="eyebrow"><span></span>Digital Documentation of Industrial Visit</p>
+  <div class="equity-header">
+    <div class="equity-identity">
+      <div class="company-mark">BEI</div>
+      <div>
+        <div class="equity-title"><h1>Bursa Efek Indonesia</h1><span class="symbol">IDX</span></div>
+        <p>Kunjungan industri<span>·</span>SCBD, Jakarta Selatan<span>·</span>19 November 2026</p>
+        <p>Disusun oleh <strong>M.Vallerian A.G</strong>, kelas XI RPL 1, SMKN 2 Jakarta Pusat</p>
+      </div>
+    </div>
+    <div class="equity-actions">
+      <a class="watch-button" href="#vlog"><i data-i="play"></i>Tonton vlog</a>
+      <button class="square-button" id="share" type="button" aria-label="Salin tautan" title="Salin tautan"><i data-i="link"></i></button>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <section class="panel price-panel" aria-labelledby="ph">
+      <div class="panel-heading price-heading">
+        <h2 id="ph">Pergerakan indeks (ilustrasi)</h2>
+        <div class="period-switch" id="periods" role="group" aria-label="Rentang waktu grafik"></div>
+      </div>
+      <div class="price-summary"><strong id="price">100,00</strong><span class="price-change" id="delta"></span></div>
+      <p class="price-date">Grafik acak untuk ilustrasi, bukan data pasar sebenarnya.</p>
+      <div class="chart">
+        <div class="chart-stage">
+          <div class="chart-plot" id="plot" tabindex="0" role="img" aria-label="Grafik indeks ilustrasi. Gunakan tombol panah kiri dan kanan untuk melihat nilai.">
+            <svg class="chart-svg" id="svg" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+            <span class="chart-dot" id="dot"></span>
+            <div class="chart-crosshair" id="cross" hidden></div>
+            <div class="chart-tooltip" id="tip" hidden></div>
+          </div>
+          <div class="chart-values" id="axis"></div>
+        </div>
+        <div class="chart-volume" id="vol"></div>
+        <div class="chart-dates" id="dates"></div>
+      </div>
+      <div class="chart-footer">
+        <div class="legend"><span><i></i>Indeks</span><span><i></i>Volume</span></div>
+        <span class="chart-currency">Basis 100 <span>· ilustrasi</span></span>
+      </div>
+    </section>
+
+    <aside class="panel snapshot" aria-labelledby="sh">
+      <div class="panel-heading snapshot-heading"><i data-i="chart"></i><h2 id="sh">Ringkasan kunjungan</h2></div>
+      <dl class="snapshot-list">
+        <div><dt>Lokasi</dt><dd>Bursa Model, SCBD</dd></div>
+        <div><dt>Kegiatan</dt><dd>6 sesi</dd></div>
+        <div><dt>Dokumentasi</dt><dd id="docCount">10 foto, 1 vlog</dd></div>
+        <div><dt>Pengawas</dt><dd>OJK</dd></div>
+        <div><dt>Produk dipelajari</dt><dd>Saham, obligasi, reksa dana</dd></div>
+      </dl>
+      <div class="sentiment">
+        <div class="sentiment-heading"><span>Alur transaksi</span><strong><i data-i="shield" data-s="14"></i>Diawasi OJK</strong></div>
+        <div class="sentiment-bar"><span style="flex:1"></span><span style="flex:1"></span><span style="flex:1"></span></div>
+        <div class="sentiment-labels"><span>BEI: jual beli</span><span>KPEI: kasir</span><span>KSEI: gudang</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- PROFIL -->
+<section class="section" id="profil">
+  <div class="section-heading"><div><i data-i="file"></i><h2>Profil Bursa Efek Indonesia</h2></div><span>Sejak 2007</span></div>
+  <div class="dashboard-grid">
+    <article class="panel research-panel">
+      <p class="article-label">Sejarah singkat</p>
+      <h3>Dari bursa masa kolonial hingga bursa modern</h3>
+      <p>BEI (Indonesia Stock Exchange/IDX) menyediakan sistem dan sarana yang mempertemukan penjual dan pembeli efek di pasar modal Indonesia.</p>
+      <div class="research-points" id="hist"></div>
+      <div class="conclusion"><span class="conclusion-mark"><i data-i="trend"></i></span><div><p class="article-label">Catatan</p><p>Penggabungan dua bursa pada 2007 membuat perdagangan efek di Indonesia terpusat di satu bursa.</p></div></div>
+    </article>
+    <aside class="panel snapshot" aria-labelledby="fh">
+      <div class="panel-heading snapshot-heading"><i data-i="chart"></i><h2 id="fh">Fakta BEI</h2></div>
+      <dl class="snapshot-list">
+        <div><dt>Nama</dt><dd>Bursa Efek Indonesia</dd></div>
+        <div><dt>Lokasi</dt><dd>Jl. Jend. Sudirman Kav. 52–53, SCBD, Jakarta Selatan</dd></div>
+        <div><dt>Pengawas</dt><dd>Otoritas Jasa Keuangan (OJK)</dd></div>
+        <div><dt>Indeks utama</dt><dd>IHSG</dd></div>
+        <div><dt>Lembaga terkait</dt><dd>KPEI dan KSEI</dd></div>
+        <div><dt>Produk</dt><dd>Saham, obligasi, reksa dana, ETF, derivatif</dd></div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<!-- KEGIATAN -->
+<section class="section" id="kegiatan">
+  <div class="section-heading"><div><i data-i="trend"></i><h2>Rangkaian kegiatan kunjungan</h2></div><span>6 sesi</span></div>
+  <div class="steps">
+    <div class="panel step-list" id="stepList" role="tablist" aria-label="Daftar sesi"></div>
+    <article class="panel research-panel step-detail" id="stepDetail" aria-live="polite"></article>
+  </div>
+</section>
+
+<!-- MATERI -->
+<section class="section" id="materi">
+  <div class="section-heading"><div><i data-i="file"></i><h2>Materi yang dipelajari</h2></div><span>Bursa Model</span></div>
+
+  <p class="article-label mini">Benda bersejarah</p>
+  <div class="cards">
+    <div class="panel card"><h4>Prospektus</h4><p>Dokumen informasi perusahaan yang menawarkan efeknya kepada calon investor.</p></div>
+    <div class="panel card"><h4>Binokular</h4><p>Teropong yang menjadi koleksi bersejarah di bursa.</p></div>
+    <div class="panel card"><h4>Kertas saham</h4><p>Bukti kepemilikan saham di masa lalu, sebelum perdagangan serba digital.</p></div>
+    <div class="panel card"><h4>Handheld transceiver</h4><p>Radio genggam, alat komunikasi yang dipakai pada masa itu.</p></div>
+  </div>
+
+  <p class="article-label mini">Tiga lembaga Bursa Model, diawasi OJK</p>
+  <div class="cards">
+    <div class="panel card"><div class="company-mark">BEI</div><h4>Bursa Efek Indonesia</h4><p>Tempat jual beli efek berlangsung.</p></div>
+    <div class="panel card"><div class="company-mark company-mark--b">KPEI</div><h4>KPEI, si kasir</h4><p>Mengurus kliring dan penjaminan agar transaksi terbayar dengan aman.</p></div>
+    <div class="panel card"><div class="company-mark company-mark--c">KSEI</div><h4>KSEI, si gudang</h4><p>Menyimpan efek dan mengurus penyelesaian transaksinya.</p></div>
+  </div>
+
+  <p class="article-label mini">Produk pasar modal</p>
+  <div class="cards">
+    <div class="panel card"><h4>Saham</h4><p>Bukti kepemilikan sebagian perusahaan.</p></div>
+    <div class="panel card"><h4>Obligasi</h4><p>Surat utang: investor meminjamkan dana kepada penerbit dan menerima bunga.</p></div>
+    <div class="panel card"><h4>Reksa dana</h4><p>Dana dari banyak investor yang dikelola manajer investasi.</p></div>
+  </div>
+
+  <p class="article-label mini">Konsep penting</p>
+  <div class="cards">
+    <div class="panel card"><h4>Capital gain</h4><p>Keuntungan dari selisih harga jual yang lebih tinggi daripada harga beli.</p></div>
+    <div class="panel card"><h4>Dividen</h4><p>Bagian laba perusahaan yang dibagikan kepada pemegang saham.</p></div>
+    <div class="panel card"><h4>Risiko dan imbal hasil</h4><p>Untung yang besar datang bersama risiko yang besar pula.</p></div>
+  </div>
+
+  <p class="article-label mini">Pertanyaan yang dibahas</p>
+  <div class="panel qa">
+    <details open><summary>Kenapa saham tidak disebut judi?</summary><p>Saham adalah kepemilikan atas bisnis nyata. Harganya bergerak mengikuti kinerja perusahaan dan kondisi ekonomi, sehingga keputusan bisa didasarkan pada analisis dan informasi, bukan semata keberuntungan. Risiko tetap ada, karena itu perlu belajar sebelum memulai.</p></details>
+    <details><summary>Bagaimana jika perusahaan penerbit obligasi bangkrut?</summary><p>Itu disebut risiko gagal bayar. Saat perusahaan pailit, pemegang obligasi sebagai kreditor didahulukan daripada pemegang saham, tetapi dana belum tentu kembali penuh. Karena itu cek kondisi dan peringkat penerbit sebelum membeli.</p></details>
+    <details><summary>Apa bedanya pasar Indonesia dengan pasar Eropa?</summary><p>Di Indonesia transaksi memakai rupiah. Di pasar Eropa, rupiah harus dikonversi dulu ke mata uang setempat, sehingga naik turunnya kurs ikut memengaruhi hasil investasi.</p></details>
+    <details><summary>Dividen tiap perusahaan berbeda, bagaimana menyikapinya?</summary><p>Besar dividen bergantung pada laba dan kebijakan masing-masing perusahaan. Jangan hanya melihat angkanya: periksa juga riwayat pembayaran dan kinerja perusahaan, lalu sebar investasi ke beberapa perusahaan.</p></details>
+    <details><summary>Bagaimana membedakan investasi legal dan ilegal?</summary><p>Pastikan perusahaan sekuritas dan aplikasi yang dipakai terdaftar dan diawasi OJK. Waspadai janji untung besar tanpa risiko.</p></details>
+    <details><summary>Apakah IDX Mobile bisa dipakai untuk jual beli saham?</summary><p>Tidak. IDX Mobile hanya untuk melihat informasi beberapa saham. Transaksi dilakukan lewat perusahaan sekuritas.</p></details>
+  </div>
+  <p class="note">Setiap perusahaan tercatat punya kode saham, misalnya INDF untuk Indofood, produsen Indomie. Pasar modal itu dinamis, harga dan informasinya terus berubah.</p>
+</section>
+
+<!-- GALERI -->
+<section class="section" id="galeri">
+  <div class="section-heading"><div><i data-i="image"></i><h2>Galeri dokumentasi</h2></div><span id="galCount">10 foto</span></div>
+  <div class="period-switch gal-filter" id="filters" role="group" aria-label="Filter foto"></div>
+  <div class="gallery" id="gallery"></div>
+</section>
+
+<!-- VLOG -->
+<section class="section" id="vlog">
+  <div class="section-heading"><div><i data-i="play"></i><h2>Vlog kunjungan</h2></div><span>Target 1:30</span></div>
+  <div class="panel video-panel">
+    <video id="vid" controls preload="metadata" playsinline poster="assets/images/poster.jpg"><source src="assets/video/vlog-kunjungan.mp4" type="video/mp4"><source src="assets/video/vlog-kunjungan.webm" type="video/webm"><p>Browser ini tidak bisa memutar video. <a href="assets/video/vlog-kunjungan.mp4">Buka videonya langsung</a>.</p></video>
+    <div class="media-details"><div><h3>Ringkasan perjalanan, dari berangkat sampai pulang</h3><p id="vidNote">Memuat video…</p></div></div>
+  </div>
+</section>
+
+<!-- REFLEKSI -->
+<section class="section" id="refleksi">
+  <div class="section-heading"><div><i data-i="file"></i><h2>Kesimpulan dan refleksi</h2></div><span>Catatan akhir</span></div>
+  <div class="dashboard-grid">
+    <article class="panel research-panel">
+      <p class="article-label">Kesimpulan</p>
+      <h3>Pasar modal bukan sekadar angka di layar</h3>
+      <p>Kunjungan ke Bursa Efek Indonesia menunjukkan bahwa ada sistem, aturan, dan lembaga yang bekerja bersama agar transaksi berjalan teratur, wajar, dan efisien. Kegiatan ini menghubungkan teori di kelas dengan praktik nyata di dunia industri keuangan.</p>
+      <p>Dokumentasi digital ini merangkum apa yang dilihat dan dipelajari, sehingga bisa dibuka kembali kapan saja.</p>
+      <div class="conclusion"><span class="conclusion-mark"><i data-i="shield"></i></span><div><p class="article-label">Pesan utama</p><p>Investasi dimulai dari memahami risikonya dan memastikan platform yang dipakai legal dan diawasi OJK.</p></div></div>
+    </article>
+    <aside class="panel snapshot qa">
+      <div class="panel-heading snapshot-heading"><i data-i="chart"></i><h2>Refleksi pribadi</h2></div>
+      <details open><summary>Apa yang paling saya pelajari?</summary><p>Bursa Model menjelaskan peran BEI sebagai tempat jual beli, KPEI sebagai kasir, dan KSEI sebagai gudang, semuanya diawasi OJK. Saya juga paham bahwa untung besar selalu datang dengan risiko besar.</p></details>
+      <details><summary>Apa tantangan selama kegiatan?</summary><p>Istilah baru seperti capital gain, dividen, dan obligasi butuh waktu untuk dipahami. Sesi tanya jawab membantu saya mengerti, misalnya kenapa saham tidak sama dengan judi.</p></details>
+      <details><summary>Bagaimana saya menerapkannya?</summary><p>Sebelum berinvestasi, saya akan memastikan platformnya legal dan diawasi OJK, memahami risikonya, dan tidak tergiur untung instan.</p></details>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <span><i data-i="trend"></i>Digital Documentation of Industrial Visit – Bursa Efek Indonesia</span>
+  <span>Dibuat oleh M.Vallerian A.G, XI RPL 1, SMKN 2 Jakarta Pusat. Tugas individu.</span>
+</footer>
+</main>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<dialog class="modal" id="searchModal" aria-labelledby="sTitle">
+  <div class="modal-body">
+    <div class="modal-heading"><h2 id="sTitle">Cari materi</h2><button class="square-button" type="button" data-close aria-label="Tutup"><i data-i="close"></i></button></div>
+    <label class="search-field"><i data-i="search"></i><input id="q" type="text" aria-label="Cari materi" placeholder="Contoh: KPEI, dividen, OJK" autocomplete="off"></label>
+    <div class="dialog-list" id="results"></div>
+  </div>
+</dialog>
+
+<dialog class="modal modal-wide" id="lb" aria-labelledby="lbCap">
+  <div class="modal-body">
+    <div class="modal-heading"><h2 id="lbCap"></h2><button class="square-button" type="button" data-close aria-label="Tutup"><i data-i="close"></i></button></div>
+    <img class="modal-media" id="lbImg" alt="">
+    <div class="lb-nav"><button class="watch-button" id="lbPrev" type="button">‹ Sebelumnya</button><span id="lbCount"></span><button class="watch-button" id="lbNext" type="button">Berikutnya ›</button></div>
+  </div>
+</dialog>
+
+<script src="js/script.js"></script>
+</body>
+</html>
